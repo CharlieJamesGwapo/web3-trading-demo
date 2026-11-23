@@ -1,23 +1,28 @@
 {
   "name": "web3-trading-demo",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
-  "description": "Illustrative demo: wallet connection, a paper-trading bot on simulated prices, and crypto-collateral loan math. Not a client deliverable.",
+  "description": "Public demo: a paper-trading crypto terminal with a rule-based trading bot, MetaMask wallet integration (read-only), and crypto-backed loan math. Simulated market data, no real funds.",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "node init && vite",
+    "build": "node init && tsc && vite build",
     "preview": "vite preview",
-    "test": "vitest run"
+    "test": "vitest run",
+    "typecheck": "tsc"
   },
   "dependencies": {
-    "ethers": "^6.13.4",
+    "ethers": "^6.17.0",
+    "node-fetch": "^3.3.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.3.4",
-    "vite": "^5.4.11",
-    "vitest": "^2.1.8"
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^6.2.1",
+    "typescript": "^5.6.3",
+    "vite": "^8.3.6",
+    "vitest": "^5.1.0"
   }
 }
